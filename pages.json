@@ -6,6 +6,8 @@
 			"style": {
 				// #ifdef MP 
 				"navigationBarTitleText": "Dloud商城",
+				 "enablePullDownRefresh": true,
+				  "backgroundTextStyle": "dark" ,
 				//"navigationStyle": "custom",
 				// #endif 
 				"app-plus": {

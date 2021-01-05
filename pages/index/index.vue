@@ -256,8 +256,21 @@
 
 		onLoad() {
 			this.loadData();//初步进入时调用加载数据，相当于vue的mounted
+			
+			 setTimeout(function () {
+			            console.log('start pulldown');
+			        }, 1000);
+			        uni.startPullDownRefresh();
+			
 		},
+		onPullDownRefresh() {
+		        console.log('4343');
+		        setTimeout(function () {
+		            uni.stopPullDownRefresh();
+		        }, 1000);
+		    },
 		methods: {
+			
 			/**
 			 * 请求静态数据只是为了代码不那么乱
 			 * 分次请求未作整合
