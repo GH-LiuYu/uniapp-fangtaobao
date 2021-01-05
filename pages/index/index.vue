@@ -299,6 +299,11 @@
 		onNavigationBarSearchInputClicked: async function(e) {
 			this.$api.msg('点击了搜索框');
 		},
+		// 标题栏input搜索框输入内容实时搜索
+		onNavigationBarSearchInputChanged: async function(e) {
+			this.$api.msg('搜索框有输入内容');
+			console.log(e)
+		},
 		//点击导航栏 buttons 时触发
 		onNavigationBarButtonTap(e) {
 			const index = e.index;
