@@ -6,8 +6,9 @@
 			"style": {
 				// #ifdef MP 
 				"navigationBarTitleText": "Dloud商城",
-				 "enablePullDownRefresh": true,
 				  "backgroundTextStyle": "dark" ,
+				  "backgroundColorTop":"#FFFFFF", // iOS下拉bounce回弹区域的颜色 (与down.bgColor同步)
+				  "backgroundColorBottom":"#FFFFFF", // iOS上拉bounce回弹区域的颜色 (与up.bgColor同步)
 				//"navigationStyle": "custom",
 				// #endif 
 				"app-plus": {
@@ -184,7 +185,8 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "#f8f8f8"
+		"backgroundColor": "#f8f8f8",
+		"backgroundColorTop":"#FFFFFF" 
 	},
 	"tabBar": {
 		"color": "#C0C4CC",

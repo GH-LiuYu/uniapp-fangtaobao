@@ -1,4 +1,5 @@
 <template>
+	<mescroll-body ref="mescrollRef" @init="mescrollInit" @down="downCallback" @up="upCallback">
 	<view>
 		<!-- 小程序头部兼容 -->
 		<!-- #ifdef MP -->
@@ -235,15 +236,21 @@
 				<text class="price">￥{{item.price}}</text>
 			</view>
 		</view>
-		
-
 	</view>
+	
+			<!-- <view class="notice-warp">
+				<view class="notice">商品的名称价格销量随时会变动,也可能会下架删除</view>
+				<view class="notice">所以本Demo的下拉刷新会重置列表数据</view>
+				<view class="btn-change" @click="isGoodsEdit=true">{{isGoodsEdit ? "已模拟后台修改信息, 请下拉刷新" : "点击模拟后台修改商品信息"}}</view>
+			</view>
+			<good-list :list="goods"></good-list> -->
+		</mescroll-body>
 </template>
 
 <script>
-
+	import MescrollMixin from "@/components/mescroll-uni/mescroll-mixins.js";
 	export default {
-
+		mixins: [MescrollMixin], // 使用mixin (在main.js注册全局组件)
 		data() {
 			return {
 				titleNViewBackground: '',
@@ -256,20 +263,101 @@
 
 		onLoad() {
 			this.loadData();//初步进入时调用加载数据，相当于vue的mounted
-			
-			 setTimeout(function () {
-			            console.log('start pulldown');
-			        }, 1000);
-			        uni.startPullDownRefresh();
-			
 		},
-		onPullDownRefresh() {
-		        console.log('4343');
-		        setTimeout(function () {
-		            uni.stopPullDownRefresh();
-		        }, 1000);
-		    },
 		methods: {
+			
+			/*mescroll组件初始化的回调,可获取到mescroll对象 (此处可删,mixins已默认)*/
+							mescrollInit(mescroll) {
+								this.mescroll = mescroll;
+							},
+							/*下拉刷新的回调, 有3种处理方式:*/
+							downCallback(){
+								console.log(343)
+								// 绝大部分情况methods中都不用写downCallback的,此时会默认调MescrollMixin的downCallback (效果同第2种)
+								
+								// 第1种: 请求具体接口
+								// uni.request({
+								// 	url: 'xxxx',
+								// 	success: () => {
+								// 		// 请求成功,隐藏加载状态
+								// 		this.mescroll.endSuccess()
+								// 	},
+								// 	fail: () => {
+								// 		// 请求失败,隐藏加载状态
+								// 		this.mescroll.endErr()
+								// 	}
+								// })
+								// // 第2种: 下拉刷新和上拉加载调同样的接口, 则不用第1种, 直接mescroll.resetUpScroll()即可
+								this.mescroll.resetUpScroll(); // 重置列表为第一页 (自动执行 page.num=1, 再触发upCallback方法 )
+								// // 第3种: 下拉刷新什么也不处理, 可直接调用或者延时一会调用 mescroll.endSuccess() 结束即可
+								// this.mescroll.endSuccess()
+								
+								// 此处仍可以继续写其他接口请求...
+								// 调用其他方法...
+							},
+							/*上拉加载的回调*/
+							upCallback(page) {
+								// let pageNum = page.num; // 页码, 默认从1开始
+								// let pageSize = page.size; // 页长, 默认每页10条
+								// uni.request({
+								// 	url: 'xxxx?pageNum='+pageNum+'&pageSize='+pageSize,
+								// 	success: (data) => {
+								// 		// 接口返回的当前页数据列表 (数组)
+								// 		let curPageData = data.xxx; 
+								// 		// 接口返回的当前页数据长度 (如列表有26个数据,当前页返回8个,则curPageLen=8)
+								// 		let curPageLen = curPageData.length; 
+								// 		// 接口返回的总页数 (如列表有26个数据,每页10条,共3页; 则totalPage=3)
+								// 		let totalPage = data.xxx; 
+								// 		// 接口返回的总数据量(如列表有26个数据,每页10条,共3页; 则totalSize=26)
+								// 		let totalSize = data.xxx; 
+								// 		// 接口返回的是否有下一页 (true/false)
+								// 		let hasNext = data.xxx; 
+										
+								// 		//设置列表数据
+								// 		if(page.num == 1) this.dataList = []; //如果是第一页需手动置空列表
+								// 		this.dataList = this.dataList.concat(curPageData); //追加新数据
+										
+								// 		// 请求成功,隐藏加载状态
+								// 		//方法一(推荐): 后台接口有返回列表的总页数 totalPage
+								// 		this.mescroll.endByPage(curPageLen, totalPage); 
+										
+								// 		//方法二(推荐): 后台接口有返回列表的总数据量 totalSize
+								// 		//this.mescroll.endBySize(curPageLen, totalSize); 
+										
+								// 		//方法三(推荐): 您有其他方式知道是否有下一页 hasNext
+								// 		//this.mescroll.endSuccess(curPageLen, hasNext); 
+										
+								// 		//方法四 (不推荐),会存在一个小问题:比如列表共有20条数据,每页加载10条,共2页.
+								// 		//如果只根据当前页的数据个数判断,则需翻到第三页才会知道无更多数据
+								// 		//如果传了hasNext,则翻到第二页即可显示无更多数据.
+								// 		//this.mescroll.endSuccess(curPageLen);
+										
+								// 		// 如果数据较复杂,可等到渲染完成之后再隐藏下拉加载状态: 如
+								// 		// 建议使用setTimeout,因为this.$nextTick某些情况某些机型不触发
+								// 		setTimeout(()=>{
+								// 			this.mescroll.endSuccess(curPageLen)
+								// 		},20)
+										
+								// 		// 上拉加载的 curPageLen 必传, 否则会一直显示'加载中...':
+								// 		// 1. 使配置的noMoreSize 和 empty生效
+								// 		// 2. 判断是否有下一页的首要依据: 
+								// 		//    当传的值小于page.size时(说明不满页了),则一定会认为无更多数据;
+								// 		//    比传入的totalPage, totalSize, hasNext具有更高的判断优先级;
+								// 		// 3. 当传的值等于page.size时(满页),才取totalPage, totalSize, hasNext判断是否有下一页
+								// 		// 传totalPage, totalSize, hasNext目的是避免方法四描述的小问题
+										
+								// 		// 提示: 您无需额外维护页码和判断显示空布局,mescroll已自动处理好.
+								// 		// 当您发现结果和预期不一样时, 建议再认真检查以上参数是否传正确
+								// 	},
+								// 	fail: () => {
+								// 		//  请求失败,隐藏加载状态
+								// 		this.mescroll.endErr()
+								// 	}
+								// })
+								
+								// 此处仍可以继续写其他接口请求...
+								// 调用其他方法...
+							},
 			
 			/**
 			 * 请求静态数据只是为了代码不那么乱
@@ -769,6 +857,26 @@
 			line-height: 1;
 		}
 	}
-	
+		/*说明*/
+		.notice-warp{
+			font-size: 26upx;
+			padding: 40upx 0;
+			border-bottom: 1upx solid #eee;
+			text-align: center;
+		}
+		.notice-warp .notice{
+			color:#555;
+		}
+		.notice-warp .btn-change{
+			display: inline-block;
+			margin-top: 28upx;
+			padding: 6upx 16upx;
+			border: 1upx solid #FF6990;
+			border-radius: 40upx;
+			color: #FF6990;
+		}
+		.notice-warp .btn-change:active{
+			opacity: .5;
+		}
 
 </style>
