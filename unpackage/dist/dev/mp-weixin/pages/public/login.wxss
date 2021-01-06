@@ -150,11 +150,4 @@ page {
   color: #4399fc;
   margin-left: 10rpx;
 }
-.other-items {
-  padding: 0 200rpx;
-}
-.other-icon {
-  width: 50rpx;
-  height: 50rpx;
-}
 

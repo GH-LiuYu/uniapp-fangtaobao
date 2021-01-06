@@ -4,7 +4,7 @@
 		<!-- 小程序头部兼容 -->
 		<!-- #ifdef MP -->
 		<view class="mp-search-box">
-			<input class="ser-input" type="text" value="输入关键字搜索" disabled />
+			<input class="ser-input" type="text" value="输入关键字搜索"/>
 		</view>
 		<!-- #endif -->
 		
@@ -404,11 +404,19 @@
 		// 标题栏input搜索框点击
 		onNavigationBarSearchInputClicked: async function(e) {
 			this.$api.msg('点击了搜索框');
+			console.log(e)
+			uni.navigateTo({
+				url: `/pages/HM-search/HM-search`
+			})
 		},
 		// 标题栏input搜索框输入内容实时搜索
 		onNavigationBarSearchInputChanged: async function(e) {
 			this.$api.msg('搜索框有输入内容');
 			console.log(e)
+		},
+		onNavigationBarButtonTap : async function(e) {
+		    console.log(444);
+		    // e的返回格式为json对象：{"text":"测试","index":0}
 		},
 		//点击导航栏 buttons 时触发
 		onNavigationBarButtonTap(e) {

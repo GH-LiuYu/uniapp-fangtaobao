@@ -17,7 +17,12 @@
         "pages/money/paySuccess",
         "pages/notice/notice",
         "pages/category/category",
-        "pages/product/list"
+        "pages/product/list",
+        "pages/login/login",
+        "pages/login/reg",
+        "pages/login/forget",
+        "pages/login/agreement",
+        "pages/jm-search/jm-search"
     ],
     "subPackages": [],
     "window": {
@@ -62,5 +67,5 @@
     "usingComponents": {
         "mescroll-body": "/components/mescroll-uni/mescroll-body"
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap3.json"
 }

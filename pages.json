@@ -14,11 +14,11 @@
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent",
-						"searchInput": {
+						"searchInput": {//搜索栏
 							"backgroundColor": "rgba(231, 231, 231,.7)",
 							"borderRadius": "16px",
 							"placeholder": "请输入地址 如：大钟寺",
-							"disabled": false,
+							"disabled": true,//这里设置为true 是方便跳转到搜索页，而不是直接输入搜索内容，如果为false 则开放输入内容
 							"placeholderColor": "#606266"
 						},
 						"buttons": [{
@@ -205,6 +205,21 @@
 			"path": "pages/login/agreement",
 			"style": {
 				"navigationBarTitleText": "用户协议"
+			}
+		},
+		{
+			"path": "components/jm-search/jm-search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/HM-search/HM-search",
+			"style": {
+				"navigationBarTitleText": "搜索模板",
+				"app-plus":{
+					"softinputNavBar": "none"
+				}
 			}
 		}
     ],
