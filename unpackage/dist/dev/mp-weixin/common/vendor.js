@@ -801,7 +801,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板 更新下单流程、分类、列表","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1858,9 +1858,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 13:
-/*!***********************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/Json.js ***!
-  \***********************************************/
+/*!***********************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/Json.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2528,9 +2528,9 @@ var cateList = [{
 /***/ }),
 
 /***/ 14:
-/*!*******************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/index.js ***!
-  \*******************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/index.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2541,9 +2541,9 @@ _Request.default;exports.default = _default;
 /***/ }),
 
 /***/ 15:
-/*!**************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/Request.js ***!
-  \**************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/Request.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2751,9 +2751,9 @@ Request = /*#__PURE__*/function () {
 /***/ }),
 
 /***/ 16:
-/*!**********************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/dispatchRequest.js ***!
-  \**********************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/dispatchRequest.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2768,9 +2768,9 @@ function _default(config) {
 /***/ }),
 
 /***/ 17:
-/*!****************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/adapters/index.js ***!
-  \****************************************************************************/
+/*!****************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/adapters/index.js ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2868,9 +2868,9 @@ function _default(config) {
 /***/ }),
 
 /***/ 178:
-/*!*******************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/components/mescroll-uni/mescroll-uni.js ***!
-  \*******************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/components/mescroll-uni/mescroll-uni.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3679,9 +3679,9 @@ MeScroll.prototype.preventDefault = function (e) {
 /***/ }),
 
 /***/ 179:
-/*!**************************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/components/mescroll-uni/mescroll-uni-option.js ***!
-  \**************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/components/mescroll-uni/mescroll-uni-option.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3726,9 +3726,9 @@ GlobalOption;exports.default = _default;
 /***/ }),
 
 /***/ 18:
-/*!******************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/helpers/buildURL.js ***!
-  \******************************************************************************/
+/*!******************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/helpers/buildURL.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3806,9 +3806,9 @@ function buildURL(url, params) {
 /***/ }),
 
 /***/ 180:
-/*!*****************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/components/mescroll-uni/wxs/mixins.js ***!
-  \*****************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/components/mescroll-uni/wxs/mixins.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3926,9 +3926,9 @@ WxsMixin;exports.default = _default;
 /***/ }),
 
 /***/ 19:
-/*!*******************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/utils.js ***!
-  \*******************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/utils.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9593,7 +9593,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板 更新下单流程、分类、列表","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -9614,14 +9614,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板 更新下单流程、分类、列表","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板 更新下单流程、分类、列表","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9707,7 +9707,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板 更新下单流程、分类、列表","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"电商模板","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -10115,9 +10115,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 20:
-/*!********************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/buildFullPath.js ***!
-  \********************************************************************************/
+/*!********************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/buildFullPath.js ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10146,9 +10146,9 @@ function buildFullPath(baseURL, requestedURL) {
 /***/ }),
 
 /***/ 21:
-/*!***********************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/helpers/isAbsoluteURL.js ***!
-  \***********************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/helpers/isAbsoluteURL.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10171,9 +10171,9 @@ function isAbsoluteURL(url) {
 /***/ }),
 
 /***/ 22:
-/*!*********************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/helpers/combineURLs.js ***!
-  \*********************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/helpers/combineURLs.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10196,9 +10196,9 @@ function combineURLs(baseURL, relativeURL) {
 /***/ }),
 
 /***/ 23:
-/*!*************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/settle.js ***!
-  \*************************************************************************/
+/*!*************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/settle.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10223,9 +10223,9 @@ function settle(resolve, reject, response) {
 /***/ }),
 
 /***/ 24:
-/*!*************************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/InterceptorManager.js ***!
-  \*************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/InterceptorManager.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10285,9 +10285,9 @@ InterceptorManager;exports.default = _default;
 /***/ }),
 
 /***/ 25:
-/*!******************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/mergeConfig.js ***!
-  \******************************************************************************/
+/*!******************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/mergeConfig.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10385,9 +10385,9 @@ function _default(globalsConfig) {var config2 = arguments.length > 1 && argument
 /***/ }),
 
 /***/ 26:
-/*!***************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/utils/luch-request/core/defaults.js ***!
-  \***************************************************************************/
+/*!***************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/utils/luch-request/core/defaults.js ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11247,9 +11247,9 @@ if (hadRuntime) {
 /***/ }),
 
 /***/ 36:
-/*!**********************************************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/components/mescroll-uni/mescroll-mixins.js ***!
-  \**********************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/components/mescroll-uni/mescroll-mixins.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11323,9 +11323,9 @@ MescrollMixin;exports.default = _default;
 /***/ }),
 
 /***/ 4:
-/*!**************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/pages.json ***!
-  \**************************************************/
+/*!**************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/pages.json ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -11334,9 +11334,9 @@ MescrollMixin;exports.default = _default;
 /***/ }),
 
 /***/ 5:
-/*!******************************************************!*\
-  !*** F:/www/uniapp/uniapp-fangtaobao/store/index.js ***!
-  \******************************************************/
+/*!******************************************************************!*\
+  !*** D:/mine/project/fangtaobo/uniapp-fangtaobao/store/index.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

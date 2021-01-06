@@ -37,6 +37,7 @@
 				</view>
 			</view>
 			<button class="confirm-btn" @click="toLogin" :disabled="logining">登录</button>
+			
 			<view class="forget-section">
 				忘记密码?
 			</view>

@@ -179,14 +179,42 @@
 				"enablePullDownRefresh": true,
 				"navigationBarTitleText": "商品列表"
 			}
-        }
+        },
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+		    "navigationBarBackgroundColor":"#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/login/reg",
+			"style": {
+				"navigationBarTitleText": "",
+		    "navigationBarBackgroundColor":"#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/login/forget",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+		    "navigationBarBackgroundColor":"#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/login/agreement",
+			"style": {
+				"navigationBarTitleText": "用户协议"
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#f8f8f8",
-		"backgroundColorTop":"#FFFFFF" 
+		"backgroundColorTop":"#FFFFFF"
+		
 	},
 	"tabBar": {
 		"color": "#C0C4CC",

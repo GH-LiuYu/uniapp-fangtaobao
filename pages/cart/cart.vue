@@ -132,7 +132,8 @@
 			},
 			navToLogin(){
 				uni.navigateTo({
-					url: '/pages/public/login'
+					// url: '/pages/public/login',//样式一
+					url: '/pages/login/login'//样式二
 				})
 			},
 			 //选中状态处理
