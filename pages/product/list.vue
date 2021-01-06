@@ -96,6 +96,7 @@
 		},
 		//加载更多
 		onReachBottom(){
+			this.$api.msg('加载')
 			this.loadData();
 		},
 		methods: {
